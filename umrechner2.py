@@ -13,29 +13,29 @@ while True:
 
     while eingabe_starteinheit == "m": #Berechnung in Kilometern wenn Meter ausgewählt
         eingabe_startlänge = input("Geben sie die Startdistanz in Metern an: ")
-        if isinstance(eingabe_startlänge, str):
+        if isinstance(eingabe_startlänge, str): # Kontrolle ob Eingabe eine Zahl ist
             try:
                 float(eingabe_startlänge)
             except ValueError:
                 print("Ungültige Eingabe. Bitte geben Sie eine Zahl ein.")
                 continue
-        ergebnis_km = float(eingabe_startlänge) / float(kilometer)
+        ergebnis_km = float(eingabe_startlänge) / float(kilometer) # Berechnung vom Ergebnis in Kilometern
         print(f"Die Distanz in Kilometern beträgt: {ergebnis_km} km")
         break
 
     while eingabe_starteinheit == "km": #Berechnung in Metern wenn Kilometer ausgewählt
         eingabe_startlänge = input("Geben sie die Startdistanz in Kilometern an: ")
-        if isinstance(eingabe_startlänge, str):
+        if isinstance(eingabe_startlänge, str): # Kontrolle ob Eingabe eine Zahl ist
             try:
                 float(eingabe_startlänge)
             except ValueError:
                 print("Ungültige Eingabe. Bitte geben Sie eine Zahl ein.")
                 continue
-        ergebnis_m = float(eingabe_startlänge) * float(kilometer)
+        ergebnis_m = float(eingabe_startlänge) * float(kilometer) # Berechnung vom Ergebnis in Metern
         print(f"Die Distanz in Metern beträgt: {ergebnis_m} m")
         break
     
-    nochmal = input("Möchten Sie eine weitere Umrechnung durchführen? (Ja (j)/Nein (n)): ")
+    nochmal = input("Möchten Sie eine weitere Umrechnung durchführen? (Ja (j)/Nein (n)): ") # Frage nach Wiederholung einer Berechnung
     if nochmal.lower() != "j":
-        print("Danke fürs Benutzen des Umrechners. Auf Wiedersehen!")
+        print("Danke fürs Benutzen des Umrechners. Auf Wiedersehen!") # Verabschiedung
         quit()
