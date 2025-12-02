@@ -2,8 +2,6 @@ kilometer = str(1000)
 
 print("Hallo Benutzer, willkommen im Umrechner") #Begrüßung
 
-print("Wollen sie Kilometer (km) oder Meter (m) umrechnen?")
-
 while True:
     eingabe_starteinheit = input("Bitte wählen Sie 'm' für Meter oder 'km' für Kilometer: ") #Auswahl von Benutzer von Ursprungseinheit
 
